@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Contact Us -";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Html.Partial("_NoMarginContactUs")
+<section id="contact-page" class="container">
+    <div class="row-fluid">
+        <div class="span8">
+            @Html.Partial("_ContactFormTitleContactUs")
+            <div class="status alert alert-success" style="display: none"></div>
+            <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="contact-us.send.php">
+                <div class="row-fluid">
+                    <div class="span5">
+                        @Html.Partial("_FullNameFormContactUs")
+                        @Html.Partial("_EmailFormContactUs")
+                        @Html.Partial("_TelephoneFormContactUs")
+                    </div>
+                    @Html.Partial("_MessageFormContactUs")
+                </div>
+                @Html.Partial("_MessageButtonContactUs")
+            </form>
+        </div>
+        @Html.Partial("_ContactData")
+    </div>
+</section>
+@Html.Partial("_ScriptsContact")

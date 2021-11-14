@@ -1,0 +1,68 @@
+﻿@model StaticWebsite.Models.Employee
+
+
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details for @Model.Name</h2>
+
+<div>
+   
+    
+    <dl class="dl-horizontal">
+        <dt>
+            <img src="/Admin/RetrieveImage/@Model.Id" alt="" height=100 width=200 />
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Intro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Intro)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.socialMedia.Facebook)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.socialMedia.Facebook)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.socialMedia.Google)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.socialMedia.Google)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.socialMedia.Twitter)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.socialMedia.Twitter)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.socialMedia.LinkedIn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.socialMedia.LinkedIn)
+        </dd>
+     
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "ManageEmployees")
+</p>
